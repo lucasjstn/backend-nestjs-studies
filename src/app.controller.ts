@@ -5,8 +5,10 @@ export class AppController {
   @Get('/') // you can pass routes to this method decorator
   @Render('index')
   index() {
+    let viewData = [];
+    viewData['title'] = 'Home Page - Online Store';
     return {
-      title: 'Home Page - Online Store',
+      viewData: viewData,
     };
   }
 
@@ -14,13 +16,11 @@ export class AppController {
   @Render('about')
   about() {
     const viewData = [];
-    viewData['description'] = 'This is an about page...';
-    viewData['author'] = 'Developed by: Lucas jstn';
-    const data1 = 'About us - Online Store';
-
+    viewData['title'] = 'About us - Online Store';
+    viewData['subtitle'] = 'About us';
+    viewData['description'] = 'This is an about page ...';
+    viewData['author'] = 'Developed by: Your Name';
     return {
-      title: data1,
-      subtitle: 'About us',
       viewData: viewData,
     };
   }
