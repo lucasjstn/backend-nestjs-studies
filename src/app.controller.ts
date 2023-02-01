@@ -5,7 +5,7 @@ export class AppController {
   @Get('/') // you can pass routes to this method decorator
   @Render('index')
   index() {
-    let viewData = [];
+    const viewData = [];
     viewData['title'] = 'Home Page - Online Store';
     return {
       viewData: viewData,
