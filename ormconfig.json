@@ -5,6 +5,6 @@
   "username": "root",
   "password": "",
   "database": "online_store",
-  "entities": ["dist/**/*.entity {.ts,.js}"],
+  "entities": ["dist/**/*.entity{.ts,.js}"],
   "synchronize": true
 }
