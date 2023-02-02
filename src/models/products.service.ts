@@ -14,7 +14,9 @@ export class ProductsService {
     return this.productsRepository.find();
   }
 
-  findOne(id: any): Promise<Product> {
-    return this.productsRepository.findOne(id);
+  findOne(id: string): Promise<Product> {
+    return this.productsRepository.findOne({
+      where: { id: parseInt(id) },
+    });
   }
 }
