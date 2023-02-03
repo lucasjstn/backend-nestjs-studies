@@ -64,9 +64,13 @@
                 <tr>
                     <td>{{getId}}</td>
                     <td>{{getName}}</td>
-                    <td><button class="btn btn-primary">
+                    <td>
+                        <a class="btn btn-primary" href="/admin/products/{{getId}}">
                             <i class="bi-pencil"></i>
-                        </button></td>
+                        </a>
+                        {{!-- <button class="btn btn-primary"> --}}
+                            {{!-- </button> --}}
+                    </td>
                     <td>
                         <form action="/admin/products/{{getId}}" method="POST">
                             <button class="btn btn-danger">
