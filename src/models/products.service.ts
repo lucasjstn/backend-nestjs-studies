@@ -19,4 +19,8 @@ export class ProductsService {
       where: { id: parseInt(id) },
     });
   }
+
+  createOrUpdate(product: Product): Promise<Product> {
+    return this.productsRepository.save(product);
+  }
 }
